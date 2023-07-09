@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Prompt Saver",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./src/popup.html",
+    "default_icon": "./assets/icon.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["create_prompt.html", "view_prompt.html"],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": false
+    }
+  ]
+}
