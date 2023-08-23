@@ -2,7 +2,7 @@ const backBtn = document.querySelector('.back-arrow')
 const form = document.querySelector('form')
 const promptTitle = document.querySelector('.prompt-title')
 const promptText = document.querySelector('.prompt-text')
-const savePromptBtn = document.querySelector('.add-prompt-section')
+const savePromptBtn = document.querySelector('.save-prompt-section')
 
 
 backBtn.addEventListener('click', () => {
@@ -11,7 +11,13 @@ backBtn.addEventListener('click', () => {
 
 savePromptBtn.addEventListener('click', () => {
     if (promptTitle.value.length === 0 || promptText.value.length === 0) {
-        return console.log('Fields cant be empty')
+        const errorMessage = document.createElement('span');
+                errorMessage.innerText = 'Text field cant be empty!';
+                errorMessage.classList.add('error-msg')
+                form.appendChild(errorMessage)
+                return setTimeout(() => {
+                    errorMessage.remove();
+                }, 1000);
     }
 
     const newPrompt = {
