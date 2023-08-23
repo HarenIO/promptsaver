@@ -18,6 +18,16 @@ ChatGPT Prompt Saver is a Chrome extension that serves as a vault for storing Ch
 ## Usage
 Click on the extension icon in your browser toolbar to open the popup. From there, you can manage your saved prompts.
 
+## Screenshots
+### Main Popup Screen
+![Main Popup Screen](https://i.imgur.com/ls3hAij.png)
+
+### Create Prompt Screen
+![Create Prompt Screen](https://i.imgur.com/NGXU2SJ.png)
+
+### View Prompt Screen
+![View Prompt Screen](https://i.imgur.com/UeiELia.png)
+
 ## Permissions
 - `storage`: Required to save the prompts to Chrome's local storage.
 
