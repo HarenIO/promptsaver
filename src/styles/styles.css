@@ -123,10 +123,10 @@ form {
     flex-direction: column;
 }
 
-.view-prompt-title {
-    font-size: 1.2rem;
-    text-align: center;
+.text {
+    display: flex;
     color: white;
+    flex-direction: column;
 }
 
 .view-prompt-text {
@@ -135,9 +135,12 @@ form {
     background-color: #40414f;
     border: 1px solid grey;
     resize: none;
-    height: 100%;
-    min-height: 0;
-  }
+    height: 150px;
+}
+
+.view-prompt-text:focus {
+    outline: none;
+}
 
 .prompt-title::placeholder {
     color: #c3d5db;
@@ -147,11 +150,19 @@ form {
     color: #c3d5db;
 }
 
-.text {
-    display: flex;
+.view-prompt-title {
+    font-size: 1.2rem;
+    text-align: center;
     color: white;
-    flex-direction: column;
 }
+
+.success-msg{
+    color: white;
+    position: absolute;
+    left: 70px;
+    top: 56px;
+}
+
 
 .title {
     display: flex;
@@ -161,6 +172,18 @@ form {
     margin-bottom: 6px;
 }
 
-.button-click{
-    background-color: #63646b;   
+.button-click {
+    background-color: #63646b;
+}
+
+.copy-button {
+    color: white;
+    padding: 4px 8px;
+    background-color: #343541;
+    border: 1px solid grey;
+}
+
+.copy-button:hover {
+    cursor: pointer;
+    background-color: #5b5c69;
 }
