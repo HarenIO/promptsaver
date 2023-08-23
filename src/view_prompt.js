@@ -38,7 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
         h2.innerText = currentPrompt.title;
         h2.classList.add('view-prompt-title');
         textArea.value = currentPrompt.text;
+
+        const deleteBtn = document.createElement('button')
+        deleteBtn.innerText = 'Delete';
+        deleteBtn.classList.add('delete-button')
+
+        deleteBtn.addEventListener('click', () => {
+
+            const confirmDeleteBtn = document.createElement('button')
+            confirmDeleteBtn.innerText = 'Confirm Delete';
+            confirmDeleteBtn.classList.add('delete-button')
+            confirmDeleteBtn.addEventListener('click', () => {
+                prompts.splice(currentPromptIndex, 1);
+        
+                chrome.storage.local.set({ 'prompts': prompts }, () => {
+                    window.location.href = 'popup.html';
+                });
+            });
+            textSection.replaceChild(confirmDeleteBtn, deleteBtn);
+        });
+        
+
         titleSection.appendChild(copyBtn)
         titleSection.appendChild(h2);
+
+        textSection.appendChild(deleteBtn)
+
     });
 });

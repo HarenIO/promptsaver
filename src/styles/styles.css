@@ -142,6 +142,7 @@ form {
     display: flex;
     color: white;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 .view-prompt-text {
@@ -176,6 +177,7 @@ form {
     position: absolute;
     left: 70px;
     top: 56px;
+    background-color: #343541;
 }
 
 .error-msg{
@@ -207,4 +209,16 @@ form {
 .copy-button:hover {
     cursor: pointer;
     background-color: #5b5c69;
+}
+
+.delete-button {
+    color: white;
+    padding: 4px 8px;
+    background-color: #343541;
+    border: 1px solid grey;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background-color: #DC3545;
 }
