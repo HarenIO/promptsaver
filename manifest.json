@@ -6,12 +6,17 @@
     "default_popup": "./src/popup.html",
     "default_icon": "./assets/icon.png"
   },
+  "icons": {
+    "16": "./assets/icon.png",
+    "48": "./assets/icon.png",
+    "128": "./assets/icon.png"
+  },
   "permissions": [
     "storage"
   ],
   "web_accessible_resources": [
     {
-      "resources": ["create_prompt.html", "view_prompt.html"],
+      "resources": ["./assets/arrow.svg", "./assets/icon.png", "./assets/icon.svg", "./assets/plus.svg", "create_prompt.html", "view_prompt.html"],
       "matches": ["<all_urls>"],
       "use_dynamic_url": false
     }
